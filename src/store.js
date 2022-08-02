@@ -68,9 +68,9 @@ class Store {
     this.setState({
       ...this.state,
       items: this.state.items.map((item) => {
-        console.log("____item", item);
         if (item.code === code) {
           item.selected = !item.selected;
+          item.counter += 1;
         } else {
           delete item["selected"];
         }
